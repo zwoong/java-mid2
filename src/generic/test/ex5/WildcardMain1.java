@@ -14,11 +14,16 @@ public class WildcardMain1 {
     dogBox.setValue(new Dog("멍멍이", 100));
 
     WildcardEx.printGenericV1(dogBox);
-    WildcardEx.printGenericV2(dogBox);
     WildcardEx.printWildcardV1(dogBox);
+
+    WildcardEx.printGenericV2(dogBox);
     WildcardEx.printWildcardV2(dogBox);
 
     Dog dog = WildcardEx.printAndReturnGeneric(dogBox);
+
+    catBox.setValue(new Cat("냐옹이", 200));
+    Cat cat = WildcardEx.printAndReturnGeneric(catBox);
+
     Animal animal = WildcardEx.printAndReturnWildcard(dogBox);
   }
 }
