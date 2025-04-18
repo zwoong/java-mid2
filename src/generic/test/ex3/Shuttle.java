@@ -9,6 +9,10 @@ public class Shuttle<T extends BioUnit> {
     unit = t;
   }
 
+  T out() {
+    return unit;
+  }
+
   void showInfo() {
     System.out.println("이름: " + unit.getName() + ", HP: " + unit.getHp());
   }

@@ -3,13 +3,13 @@ package generic.test.ex3;
 import generic.test.ex3.unit.BioUnit;
 
 public class UnitPrinter {
-  static <T extends Shuttle> void printV1(T shuttle) {
-    System.out.println("이름: " + shuttle.getName() + ", HP: " + shuttle.getHp());
+  static <T extends BioUnit> void printV1(Shuttle<T> t1) {
+    T unit = t1.out();
+    System.out.println("이름: " + unit.getName() + ", HP: " + unit.getHp());
   }
 
-//  static void printWildcardV1(Box<?> box) {
-//    System.out.println("? = " + box.getValue());
-//  }
-
-
+  static void printV2(Shuttle<? extends BioUnit> t1) {
+    BioUnit unit = t1.out();
+    System.out.println("이름: " + unit.getName() + ", HP: " + unit.getHp());
+  }
 }
