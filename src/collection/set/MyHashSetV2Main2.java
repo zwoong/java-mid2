@@ -7,7 +7,7 @@ public class MyHashSetV2Main2 {
   public static void main(String[] args) {
     MyHashSetV2 set = new MyHashSetV2(10);
     Member hi = new Member("hi");
-    Member jpa = new Member("JAP");
+    Member jpa = new Member("JPA");
     Member java = new Member("java");
     Member spring = new Member("spring");
 
@@ -23,7 +23,7 @@ public class MyHashSetV2Main2 {
     System.out.println(set);
     
     // 검색
-    Member searchValue = new Member("JAP");
+    Member searchValue = new Member("JPA");
     boolean result = set.contains(searchValue);
     System.out.println("result = " + result);
   }
